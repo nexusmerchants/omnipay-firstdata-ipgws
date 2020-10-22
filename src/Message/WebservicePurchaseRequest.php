@@ -90,6 +90,7 @@ class WebservicePurchaseRequest extends WebserviceAbstractRequest
             <v1:Zip>%card_postcode%</v1:Zip>
             <v1:Country>%card_country%</v1:Country>
             <v1:Email>%card_email%</v1:Email>
+            <v1:Phone>%card_phone%</v1:Phone>
         </v1:Billing>
     </v1:Transaction>
 </ipgapi:IPGApiOrderRequest>
@@ -152,6 +153,7 @@ class WebservicePurchaseRequest extends WebserviceAbstractRequest
         $data['card_postcode']      = $this->getCard()->getBillingPostcode();
         $data['card_country']       = $this->getCard()->getBillingCountry();
         $data['card_email']         = $this->getCard()->getEmail();
+        $data['card_phone']         = $this->getCard()->getPhone();
         $data['cvd_code']           = $this->getCard()->getCvv();
 
         return $data;

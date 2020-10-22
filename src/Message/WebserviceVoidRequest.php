@@ -49,8 +49,8 @@ class WebserviceVoidRequest extends WebserviceAbstractRequest
 {
     /** @var string XML template for the void request */
     protected $xmlTemplate = '
-<fdggwsapi:FDGGWSApiOrderRequest xmlns:v1="http://secure.linkpt.net/fdggwsapi/schemas_us/v1"
-    xmlns:fdggwsapi="http://secure.linkpt.net/fdggwsapi/schemas_us/fdggwsapi">
+<ipgapi:IPGApiOrderRequest xmlns:v1="http://ipg-online.com/ipgapi/schemas/v1"
+    xmlns:ipgapi="http://ipg-online.com/ipgapi/schemas/ipgapi">
     <v1:Transaction>
         <v1:CreditCardTxType>
             <v1:Type>%txn_type%</v1:Type>
@@ -60,7 +60,7 @@ class WebserviceVoidRequest extends WebserviceAbstractRequest
             <v1:TDate>%tdate%</v1:TDate>
         </v1:TransactionDetails>
     </v1:Transaction>
-</fdggwsapi:FDGGWSApiOrderRequest>
+</ipgapi:IPGApiOrderRequest>
 ';
 
     /** @var string Transaction type */
